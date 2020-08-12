@@ -1,0 +1,28 @@
+<div id="column">
+  <div id="column">
+    <div id="raw">
+      <label>Operando A</label>
+    </div>
+    <div id="raw">
+      <input type="number" placeholder="Escriba operando A" [(ngModel)]="operandoA">
+    </div>
+  </div>
+
+  <div id="column">
+    <div id="raw">
+      <label>Operando B</label>
+    </div>
+    <div id="raw">
+      <input type="number" placeholder="Escriba operando B" [(ngModel)]="operandoB">
+    </div>
+  </div>
+
+  <div id="column">
+    <div id="raw">
+      <button class="btn btn-primary" (click)="onSumar()">Sumar</button>
+    </div>
+    <div class="raw">
+      <p>Resultado: </p>{{suma}}
+    </div>
+  </div>
+</div>
