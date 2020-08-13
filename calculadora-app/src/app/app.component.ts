@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'calculadora-app';
-  operandoA: number;
-  operandoB: number;
   suma: number;
 
-  onSumar(){
-    this.suma = this.operandoA + this.operandoB;
+  onMostrarResultado(suma: number){
+    this.suma = suma;
   }
 }
