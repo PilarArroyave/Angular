@@ -9,11 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   titulo = 'Listado de Personas';
   personas: Persona[] = [new Persona("Christian", "Bolaños"), new Persona("Pilar", "Arroyave")];
-  nombreInput: string;
-  apellidoInput: string;
 
-  onAgregarPersona () {
-    let persona = new Persona(this.nombreInput, this.apellidoInput);
+  onPersonaAgregada(persona: Persona){
     this.personas.push(persona);
   }
 }
