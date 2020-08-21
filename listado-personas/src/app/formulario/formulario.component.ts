@@ -8,11 +8,11 @@ import { Persona } from '../persona.model';
 })
 export class FormularioComponent {
   @Output() personaCreada = new EventEmitter<Persona>();
-  nombreInput: string;
-  apellidoInput: string;
+  //nombreInput: string;
+  //apellidoInput: string;
 
-  onAgregarPersona () {
-    let persona = new Persona(this.nombreInput, this.apellidoInput);
+  onAgregarPersona (nombreInput: HTMLInputElement, apellidoInput: HTMLInputElement) {
+    let persona = new Persona(nombreInput.value, apellidoInput.value);
     this.personaCreada.emit(persona);
   }
 }
